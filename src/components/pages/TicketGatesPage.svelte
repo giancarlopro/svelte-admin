@@ -5,7 +5,7 @@ import Navbar from '../organisms/Navbar.svelte';
 import Sidebar from '../organisms/Sidebar.svelte';
 </script>
 
-<Sidebar active='usuarios' />
+<Sidebar active='catracas' />
 <Main>
-  <Navbar title="Usuáros" />
+  <Navbar title="Catracas" />
 </Main>

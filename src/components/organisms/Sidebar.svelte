@@ -1,6 +1,8 @@
 <script>
 import SidebarItem from '../molecules/SidebarItem.svelte';
 import SidebarHeader from '../molecules/SidebarHeader.svelte';
+
+export let active = 'dashboard';
 </script>
 
 <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 " id="sidenav-main">
@@ -8,7 +10,7 @@ import SidebarHeader from '../molecules/SidebarHeader.svelte';
   <hr class="horizontal dark mt-0">
   <div class="collapse navbar-collapse  w-auto  max-height-vh-100 h-100" id="sidenav-collapse-main">
     <ul class="navbar-nav">
-      <SidebarItem label="Dashboard" active>
+      <SidebarItem label="Dashboard" active={active === 'dashboard'} href='/'>
         <svg width="12px" height="12px" viewBox="0 0 45 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           <title>shop </title>
           <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -26,10 +28,10 @@ import SidebarHeader from '../molecules/SidebarHeader.svelte';
       <li class="nav-item mt-3">
         <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Recursos</h6>
       </li>
-      <SidebarItem label="Usuários" href="/users">
-        <i class="fa fa-user" style="color: black;"></i>
+      <SidebarItem label="Usuários" active={active === 'usuarios'} href="/users">
+        <i class="fa fa-user"></i>
       </SidebarItem>
-      <SidebarItem label="Catracas">
+      <SidebarItem label="Catracas" active={active === 'catracas'} href="/ticket_gates">
         <i class="fa fa-cog" style="color: black;"></i>
       </SidebarItem>
     </ul>
