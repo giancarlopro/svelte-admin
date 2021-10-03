@@ -16,9 +16,10 @@
                 <Button outline class="mb-0">Pesquisar</Button>
               </InputGroup>
             </div>
-            <Button color="success" size="sm">
+
+            <a href="/users/import" class="btn btn-sm btn-success">
               <i class="fa fa-download"></i> Importar
-            </Button>
+            </a>
           </div>
         </div>
       </div>
