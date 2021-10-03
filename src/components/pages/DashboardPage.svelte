@@ -7,16 +7,9 @@ import Navbar from '../organisms/Navbar.svelte';
 import Sidebar from '../organisms/Sidebar.svelte';
 </script>
 
-<Sidebar />
-<Main>
-  <Navbar title="Dashboard" />
+<ResumeCards />
 
-  <div class="container-fluid py-4">
-    <ResumeCards />
-
-    <div class="row mt-4">
-      <WeeklyReport />
-      <DailyReport />
-    </div>
-  </div>
-</Main>
+<div class="row mt-4">
+  <WeeklyReport />
+  <DailyReport />
+</div>
