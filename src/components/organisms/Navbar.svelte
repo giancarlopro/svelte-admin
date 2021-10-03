@@ -6,6 +6,7 @@
   let labels = {
     users: 'Usuários',
     ticket_gates: 'Catracas',
+    import: 'Importar'
   };
 
   $: paths = $page.path.split('/').filter(p => p.length !== 0);
@@ -20,7 +21,7 @@
   function linkFor(pathname) {
     const index = paths.indexOf(pathname);
 
-    return paths.slice(0, index).join('/');
+    return '/' + paths.slice(0, index - 1).join('/');
   }
 </script>
 
