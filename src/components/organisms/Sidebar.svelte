@@ -1,8 +1,9 @@
 <script>
-import SidebarItem from '../molecules/SidebarItem.svelte';
-import SidebarHeader from '../molecules/SidebarHeader.svelte';
+  import SidebarItem from '../molecules/SidebarItem.svelte';
+  import SidebarHeader from '../molecules/SidebarHeader.svelte';
+  import { page } from '$app/stores';
 
-export let active = 'dashboard';
+  $: active = $page.path.split('/')[1] || 'dashboard';
 </script>
 
 <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 " id="sidenav-main">
@@ -28,10 +29,10 @@ export let active = 'dashboard';
       <li class="nav-item mt-3">
         <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Recursos</h6>
       </li>
-      <SidebarItem label="Usuários" active={active === 'usuarios'} href="/users">
+      <SidebarItem label="Usuários" active={active === 'users'} href="/users">
         <i class="fa fa-user"></i>
       </SidebarItem>
-      <SidebarItem label="Catracas" active={active === 'catracas'} href="/ticket_gates">
+      <SidebarItem label="Catracas" active={active === 'ticket_gates'} href="/ticket_gates">
         <i class="fa fa-cog" style="color: black;"></i>
       </SidebarItem>
     </ul>
